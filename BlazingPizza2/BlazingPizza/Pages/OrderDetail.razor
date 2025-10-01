@@ -1,5 +1,5 @@
 @page "/myorders/{orderId:int}"
-@inject NavigationManager NavigationManger
+@inject NavigationManager NavigationManager
 @inject HttpClient HttpClient
 
 <div class="main">
@@ -33,14 +33,14 @@
                 </p>
             </div>
             <div class="track-order-body">
-                <div class="track-order'details">
+                <div class="track-order-details">
                     @foreach (var pizza in orderWithStatus.Order.Pizzas)
                     {
                         <p>
                             <strong>
                                 @(pizza.Size)"
                                 @pizza.Special.Name
-                                (£@pizza.GetFormattedTotalPrice())
+                                (₱@pizza.GetFormattedTotalPrice())
                             </strong>
                         </p>
                     }
